@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ImageLoading</string>
+    <string name="simple">simple</string>
+    <string name="resized">resized</string>
+    <string name="cropped">cropped</string>
+    <string name="circular">circular</string>
+    <string name="blur">Blur</string>
+    <string name="multi_edit">Multi edit</string>
+    <string name="color_filter">color filter</string>
+    <string name="sepia">sepia</string>
+</resources>
