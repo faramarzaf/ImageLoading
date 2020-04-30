@@ -1,19 +1,17 @@
 package com.faramarz.tictacdev.imageloading;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.PointF;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.MultiTransformation;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.resource.bitmap.CenterCrop;
 import com.bumptech.glide.load.resource.bitmap.CircleCrop;
 import com.bumptech.glide.request.RequestOptions;
@@ -168,14 +166,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void showSimpleImage() {
         Glide.with(this).load(URL)
-                //  .centerCrop()
-                //  .diskCacheStrategy(DiskCacheStrategy.ALL)
-                //  .placeholder(R.drawable.img_placeholder)
-                //.error(R.drawable.img_error)
-                // .fallback(new ColorDrawable(Color.GRAY))
-                // .onlyRetrieveFromCache(true)
                 .into(imgSimple);
-
     }
 
     private void showResizedImage() {
@@ -290,7 +281,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 .apply(overrideOf(266, 252))
                 .apply(bitmapTransform(new MultiTransformation<Bitmap>(new CenterCrop(), new MaskTransformation(R.drawable.star_mask))))
                 .into(imgSimple);
-
     }
 
 }
